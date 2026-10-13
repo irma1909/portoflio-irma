@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Irma Wally | Network Engineer & System Administrator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased transition-colors duration-300" id="body">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-slate-900/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50 transition-colors duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-cyan-400 hover:opacity-80 transition">Irma Wally<span class="text-slate-400">.net</span></a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-cyan-400 transition">Tentang</a>
+                <a href="#skills" class="hover:text-cyan-400 transition">Keterampilan</a>
+                <a href="#projects" class="hover:text-cyan-400 transition">Proyek</a>
+                <a href="#certifications" class="hover:text-cyan-400 transition">Sertifikasi</a>
+                <a href="#contact" class="hover:text-cyan-400 transition">Kontak</a>
+                
+                <!-- Theme Toggle Button -->
+                <button onclick="toggleTheme()" class="p-2 rounded-full bg-slate-800 text-cyan-400 hover:bg-slate-700 transition" title="Ganti Tema">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu Toggle & Theme -->
+            <div class="flex items-center md:hidden gap-4">
+                <button onclick="toggleTheme()" class="p-2 rounded-full bg-slate-800 text-cyan-400">
+                    <i class="fa-solid fa-moon" id="theme-icon-mob"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex items-center pt-20 px-6 relative overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative z-10 w-full">
+            <div class="md:w-2/3 space-y-6 fade-in">
+                <div class="inline-block px-3 py-1 bg-cyan-950 text-cyan-400 text-xs font-semibold rounded-full border border-cyan-800">
+                    Open for Network Engineer Intern / Junior Role
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                    Halo, Saya <span class="text-cyan-400">Irma Wally</span>
+                </h1>
+                <p class="text-xl text-slate-300 font-medium">
+                    Network Engineer & System Administrator
+                </p>
+                <p class="text-slate-400 dark:text-slate-400 leading-relaxed max-w-2xl">
+                    Spesialis dalam pembangunan Server Ubuntu, manajemen routing & switching MikroTik (MTCNA & MTCRE Certified), serta perencanaan jaringan berstandar CCNA.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg shadow-cyan-500/20 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane mr-2"></i>Hubungi Saya
+                    </a>
+                    <button onclick="downloadCV()" class="border border-slate-700 hover:border-cyan-400 hover:text-cyan-400 text-slate-300 font-semibold px-6 py-3 rounded-lg transition-all duration-200">
+                        <i class="fa-solid fa-download mr-2"></i>Unduh CV
+                    </button>
+                </div>
+            </div>
+            
+            <!-- AVATAR / ICON -->
+            <div class="md:w-1/3 flex justify-center fade-in">
+                <div class="w-64 h-64 rounded-2xl bg-gradient-to-tr from-cyan-500 to-blue-600 p-1 shadow-2xl shadow-cyan-500/10 transform hover:scale-105 transition duration-300">
+                    <div class="w-full h-full bg-slate-900 rounded-[15px] flex flex-col items-center justify-center p-6 text-center">
+                        <i class="fa-solid fa-network-wired text-6xl text-cyan-400 mb-4 animate-pulse"></i>
+                        <p class="font-bold text-slate-200">Teknik Komputer & Jaringan</p>
+                        <p class="text-xs text-slate-400 mt-1">Politeknik IDN Bogor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 border-t border-slate-800 bg-slate-950/50 px-6">
+        <div class="max-w-6xl mx-auto space-y-8">
+            <h2 class="text-3xl font-bold text-slate-100 flex items-center gap-3">
+                <i class="fa-solid fa-user-gear text-cyan-400"></i> Ringkasan Profesional
+            </h2>
+            <p class="text-slate-300 leading-relaxed text-lg max-w-4xl">
+                Mahasiswa aktif Teknik Komputer dan Jaringan di Politeknik IDN Bogor dengan fokus spesialisasi dalam pembangunan Server Ubuntu, manajemen routing & switching MikroTik, serta perencanaan jaringan berstandar CCNA. Memiliki sertifikasi resmi MikroTik (MTCNA & MTCRE). Teliti, terbiasa bekerja rapi dan terstruktur baik secara mandiri maupun dalam tim. Siap berkontribusi sebagai Network Engineer Intern atau Junior Network Engineer.
+            </p>
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 max-w-md hover:border-cyan-500/40 transition duration-300">
+                <h3 class="font-semibold text-cyan-400 mb-2"><i class="fa-solid fa-graduation-cap mr-2"></i>Pendidikan</h3>
+                <p class="font-bold text-slate-200">Politeknik IDN Bogor (2024 - Sekarang)</p>
+                <p class="text-sm text-slate-400">D3/S1 Teknik Komputer dan Jaringan</p>
+                <p class="text-xs text-slate-500 mt-2">Fokus Studi: Network Engineering, System Administration, & Desain Infrastruktur Jaringan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 border-t border-slate-800 px-6">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <h2 class="text-3xl font-bold text-slate-100 flex items-center gap-3">
+                <i class="fa-solid fa-code text-cyan-400"></i> Keterampilan Teknis
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Rekayasa Jaringan -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-diagram-project text-3xl text-cyan-400 mb-4"></i>
+                    <h3 class="font-bold text-slate-200 mb-3">Rekayasa Jaringan</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Subnetting</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">IP Addressing</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">VLAN</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Inter-VLAN Routing</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">OSPF</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">CCNA Standard</span>
+                    </div>
+                </div>
+
+                <!-- Administrasi Sistem -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-server text-3xl text-cyan-400 mb-4"></i>
+                    <h3 class="font-bold text-slate-200 mb-3">Administrasi Sistem</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Ubuntu Server</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">SSH</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">DNS BIND9</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Apache / Nginx</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">MySQL/MariaDB</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">FTP & NTP</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Perangkat -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-screwdriver-wrench text-3xl text-cyan-400 mb-4"></i>
+                    <h3 class="font-bold text-slate-200 mb-3">Tools & Perangkat</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">MikroTik RouterOS</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Winbox</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Cisco Packet Tracer</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Terminal CLI</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-users text-3xl text-cyan-400 mb-4"></i>
+                    <h3 class="font-bold text-slate-200 mb-3">Soft Skills & Bahasa</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Problem Solving</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Kerja Sama Tim</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Dokumentasi Teknis</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Bahasa Indonesia (Fasih)</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-xs text-slate-300 rounded-md">Bahasa Inggris (Dasar)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION WITH FILTER -->
+    <section id="projects" class="py-20 border-t border-slate-800 bg-slate-950/50 px-6">
+        <div class="max-w-6xl mx-auto space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <h2 class="text-3xl font-bold text-slate-100 flex items-center gap-3">
+                    <i class="fa-solid fa-folder-open text-cyan-400"></i> Pengalaman Proyek
+                </h2>
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterProjects('all')" class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-cyan-500 text-slate-955 filter-btn transition" id="btn-all">Semua</button>
+                    <button onclick="filterProjects('server')" class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 filter-btn transition" id="btn-server">Server & Sistem</button>
+                    <button onclick="filterProjects('network')" class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 filter-btn transition" id="btn-network">Jaringan & MikroTik</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="project-grid">
+                
+                <!-- Proyek 1 -->
+                <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col project-card transition duration-300 hover:border-cyan-500/50" data-category="server">
+                    <div class="p-6 flex-1 space-y-4">
+                        <div class="text-xs text-cyan-400 font-semibold">2024 • Proyek Akhir Perkuliahan</div>
+                        <h3 class="text-xl font-bold text-slate-200">Pembangunan Server Ubuntu Lengkap</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Membangun dan mengonfigurasi Server Ubuntu dari dasar hingga siap pakai secara mandiri meliputi SSH, NTP Time Sync, FTP, DNS BIND9, Web Server, MySQL, dan CMS WordPress.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-950 border-t border-slate-800 text-xs text-slate-400">
+                        <strong class="text-cyan-400">Hasil:</strong> Server beroperasi aman, stabil, lolos pengujian konektivitas, dan terdokumentasi lengkap.
+                    </div>
+                </div>
+
+                <!-- Proyek 2 -->
+                <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col project-card transition duration-300 hover:border-cyan-500/50" data-category="network">
+                    <div class="p-6 flex-1 space-y-4">
+                        <div class="text-xs text-cyan-400 font-semibold">2024 • Proyek Perkuliahan</div>
+                        <h3 class="text-xl font-bold text-slate-200">Perencanaan & Desain Jaringan Komputer</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Merancang arsitektur jaringan skala menengah meliputi alokasi IP Address, Subnetting, dan isolasi VLAN, serta disimulasikan menggunakan Cisco Packet Tracer.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-950 border-t border-slate-800 text-xs text-slate-400">
+                        <strong class="text-cyan-400">Hasil:</strong> Desain terstruktur rapi, efisien dalam alokasi IP, dan siap diimplementasikan secara nyata.
+                    </div>
+                </div>
+
+                <!-- Proyek 3 -->
+                <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col project-card transition duration-300 hover:border-cyan-500/50" data-category="network">
+                    <div class="p-6 flex-1 space-y-4">
+                        <div class="text-xs text-cyan-400 font-semibold">2024 • Praktikum Sertifikasi</div>
+                        <h3 class="text-xl font-bold text-slate-200">Konfigurasi Routing & Switching MikroTik</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Mengonfigurasi MikroTik RouterOS sesuai standar MTCNA dan MTCRE, mengimplementasikan Static Routing, Dynamic Routing (OSPF), Firewall NAT, serta Bandwidth Management.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-950 border-t border-slate-800 text-xs text-slate-400">
+                        <strong class="text-cyan-400">Hasil:</strong> Routing OSPF berjalan dinamis, lalu lintas data aman, dan siap menangani beban jaringan.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="py-20 border-t border-slate-800 px-6">
+        <div class="max-w-6xl mx-auto space-y-8">
+            <h2 class="text-3xl font-bold text-slate-100 flex items-center gap-3">
+                <i class="fa-solid fa-award text-cyan-400"></i> Sertifikasi & Pelatihan
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-cyan-500/50 transition">
+                    <i class="fa-solid fa-certificate text-2xl text-cyan-400 mt-1"></i>
+                    <div>
+                        <h3 class="font-bold text-slate-200">MTCRE</h3>
+                        <p class="text-xs text-slate-400">MikroTik Certified Routing Engineer</p>
+                        <span class="inline-block mt-2 text-xs font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded">MikroTik (2024)</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-cyan-500/50 transition">
+                    <i class="fa-solid fa-certificate text-2xl text-cyan-400 mt-1"></i>
+                    <div>
+                        <h3 class="font-bold text-slate-200">MTCNA</h3>
+                        <p class="text-xs text-slate-400">MikroTik Certified Network Associate</p>
+                        <span class="inline-block mt-2 text-xs font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded">MikroTik (2024)</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-cyan-500/50 transition">
+                    <i class="fa-solid fa-graduation-cap text-2xl text-cyan-400 mt-1"></i>
+                    <div>
+                        <h3 class="font-bold text-slate-200">Pelatihan CCNA Dasar</h3>
+                        <p class="text-xs text-slate-400">Cisco Certified Network Associate Fundamentals</p>
+                        <span class="inline-block mt-2 text-xs font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded">Politeknik IDN Bogor (2024)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 border-t border-slate-800 bg-slate-950/50 px-6">
+        <div class="max-w-6xl mx-auto space-y-8 text-center">
+            <h2 class="text-3xl font-bold text-slate-100">Mari Terhubung!</h2>
+            <p class="text-slate-400 max-w-xl mx-auto">
+                Saya selalu terbuka untuk peluang magang, kolaborasi proyek, maupun posisi Junior Network Engineer.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-6 pt-4">
+                <a href="mailto:irmawally1909@gmail.com" class="flex items-center gap-3 bg-slate-900 border border-slate-800 hover:border-cyan-400 px-6 py-4 rounded-xl text-slate-200 transition transform hover:-translate-y-1">
+                    <i class="fa-solid fa-envelope text-cyan-400 text-xl"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-slate-500">Email</div>
+                        <div class="text-sm font-semibold">irmawally1909@gmail.com</div>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/irmawally" target="_blank" class="flex items-center gap-3 bg-slate-900 border border-slate-800 hover:border-cyan-400 px-6 py-4 rounded-xl text-slate-200 transition transform hover:-translate-y-1">
+                    <i class="fa-brands fa-linkedin text-cyan-400 text-xl"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-slate-500">LinkedIn</div>
+                        <div class="text-sm font-semibold">linkedin.com/in/irmawally</div>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/6285753970816" target="_blank" class="flex items-center gap-3 bg-slate-900 border border-slate-800 hover:border-cyan-400 px-6 py-4 rounded-xl text-slate-200 transition transform hover:-translate-y-1">
+                    <i class="fa-solid fa-phone text-cyan-400 text-xl"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-slate-500">Telepon / WhatsApp</div>
+                        <div class="text-sm font-semibold">+62 857-5397-0816</div>
+                    </div>
+                </a>
+            </div>
+
+            <p class="text-xs text-slate-500 pt-8">
+                <i class="fa-solid fa-location-dot mr-1"></i> Bukit Aster AS 09 No.1, Citra Indah City, Bogor, Jawa Barat
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-6 border-t border-slate-800 text-center text-xs text-slate-500">
+        © 2026 Irma Wally. All rights reserved. Built with HTML & Tailwind CSS.
+    </footer>
+
+    <!-- JAVASCRIPT INTERACTIVE FEATURES -->
+    <script>
+        // Smooth Filter Proyek
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-cyan-500', 'text-slate-955');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+
+            const activeBtn = document.getElementById(`btn-${category}`);
+            activeBtn.classList.remove('bg-slate-800', 'text-slate-300');
+            activeBtn.classList.add('bg-cyan-500', 'text-slate-955');
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'flex';
+                        setTimeout(() => card.style.opacity = '1', 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }, 200);
+            });
+        }
+
+        // Simulasi Unduh CV
+        function downloadCV() {
+            alert('Fitur unduh CV diaktifkan! Silakan sambungkan tautan file PDF CV asli Anda di sini.');
+        }
+
+        // Dark / Light Mode Toggle
+        function toggleTheme() {
+            const body = document.getElementById('body');
+            const icon = document.getElementById('theme-icon');
+            const iconMob = document.getElementById('theme-icon-mob');
+            
+            if (body.classList.contains('bg-slate-900')) {
+                // Switch ke Light Mode sederhana
+                body.classList.remove('bg-slate-900', 'text-slate-100');
+                body.classList.add('bg-slate-50', 'text-slate-900');
+                icon.className = "fa-solid fa-sun";
+                iconMob.className = "fa-solid fa-sun";
+            } else {
+                // Switch kembali ke Dark Mode
+                body.classList.remove('bg-slate-50', 'text-slate-900');
+                body.classList.add('bg-slate-900', 'text-slate-100');
+                icon.className = "fa-solid fa-moon";
+                iconMob.className = "fa-solid fa-moon";
+            }
+        }
+    </script>
+</body>
+</html>
